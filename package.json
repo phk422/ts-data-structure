@@ -1,12 +1,27 @@
 {
   "name": "ts-data-structure",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "penghongkun",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.0.0",
+    "eslint": "^8.54.0",
+    "lint-staged": "^15.1.0",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.2.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
 }

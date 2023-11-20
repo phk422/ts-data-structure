@@ -8,6 +8,7 @@
   "keywords": [],
   "main": "index.ts",
   "scripts": {
+    "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

@@ -39,3 +39,13 @@ it('linkedList remove', () => {
   expect(linkedList.remove(2)).toBe(list[2])
   linkedList.remove(2)
 })
+
+it('linkedList search', () => {
+  const linkedList = new LinkedList<number>()
+  const list = [1, 23, 454, 54]
+  list.forEach(i => linkedList.append(i))
+  expect(linkedList.search(1)).toBe(true)
+  expect(linkedList.search(23)).toBe(true)
+  expect(linkedList.search(54)).toBe(true)
+  expect(linkedList.search(222)).toBe(false)
+})

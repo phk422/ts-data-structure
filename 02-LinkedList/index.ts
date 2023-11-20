@@ -79,6 +79,22 @@ export default class LinkedList<T> {
   }
 
   /**
+   * 查找某个值是否在链表中
+   * @param value 要查找的值
+   * @returns 是否含有需要查找的值
+   */
+  search(value: T) {
+    let current = this.head
+    while (current) {
+      if (current.value === value)
+        return true
+      else
+        current = current.next!
+    }
+    return false
+  }
+
+  /**
    * 根据下标获取当前node节点
    * @param position 下标
    * @returns 获取到的节点

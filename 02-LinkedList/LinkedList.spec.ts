@@ -49,3 +49,11 @@ it('linkedList search', () => {
   expect(linkedList.search(54)).toBe(true)
   expect(linkedList.search(222)).toBe(false)
 })
+
+it('linkedList reverse', () => {
+  const linkedList = new LinkedList<number>()
+  const list = [1, 2, 4, 90, 343]
+  list.forEach(i => linkedList.append(i))
+  linkedList.reverse()
+  expect(linkedList.traverse().toString()).toBe(list.reverse().toString())
+})

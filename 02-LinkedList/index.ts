@@ -1,3 +1,5 @@
+import Stack from '../01-Stack'
+
 class Node<T> {
   public next: Node<T> | null
   public value: T
@@ -92,6 +94,27 @@ export default class LinkedList<T> {
         current = current.next!
     }
     return false
+  }
+
+  /**
+   * 反转链表
+   */
+  reverse() {
+    if (this.size <= 1)
+      return
+    const stack = new Stack<Node<T>>()
+    let current = this.head
+    while (current) {
+      stack.push(current)
+      current = current.next
+    }
+    this.head = stack.pop()!
+    current = this.head
+    while (stack.size > 0) {
+      current.next = stack.pop()!
+      current = current.next
+    }
+    current.next = null
   }
 
   /**

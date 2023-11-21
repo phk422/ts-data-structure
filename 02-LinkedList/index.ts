@@ -95,6 +95,22 @@ export default class LinkedList<T> {
   }
 
   /**
+   * 清空链表
+   */
+  clear() {
+    this.head = null
+    this.length = 0
+  }
+
+  /**
+   * 判断链表是否为空
+   * @returns 链表是否为空
+   */
+  isEmpty() {
+    return this.length === 0
+  }
+
+  /**
    * 根据下标获取当前node节点
    * @param position 下标
    * @returns 获取到的节点

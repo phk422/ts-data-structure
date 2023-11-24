@@ -8,6 +8,7 @@
   "keywords": [],
   "main": "index.ts",
   "scripts": {
+    "start": "ts-node ./00-SortAlgorithm/4-MergeSort.ts",
     "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
